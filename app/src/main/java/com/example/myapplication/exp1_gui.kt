@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
@@ -12,6 +13,7 @@ class exp1_gui: AppCompatActivity() { //inheretance
         val fontsize: Button = findViewById(R.id.button1)
         val font_colour: Button = findViewById(R.id.button2)
         val backgroundcolour: Button = findViewById(R.id.button3)
+        val next: Button = findViewById(R.id.button4)
         var i=0
     fontsize.setOnClickListener {
         fontsize.textSize = fontsize.textSize + 5
@@ -34,5 +36,9 @@ class exp1_gui: AppCompatActivity() { //inheretance
         }
         i=(i+1)%3
     }
+   next.setOnClickListener {
+       val intent = Intent(this, assignment_1_tl_checkin_checkout::class.java)
+       startActivity(intent)
+   }
 
 }}
